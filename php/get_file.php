@@ -56,7 +56,6 @@ $rinex='/reach_raw_'.$data.$hora.'_RINEX_3_03.zip'; //CASO MUDAR A VERSÃO DO RI
 //$diretorio='/dados/cepag/BASE_GNSS/'.$ano.'/'.$mes;
 $diretorio='/dados/cepag/BASE_GNSS/DADOS_RINEX';
 //$connection->chdir($diretorio);
-$file_rinex=fopen('ssh2.sftp://cepag:*Cepag*@200.17.248.35:22'.$diretorio.$rinex,'r'); //ABRE O ARQUIVO RINEX
 
 $arch='base_cepag_'.$data.'.zip';
 
