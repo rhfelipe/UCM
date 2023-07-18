@@ -40,8 +40,6 @@ function cria_24h($ano,$mes,$dia){
 //readfile($this->dirPath."/".$archive_file_name);
 //unlink($this->dirPath."/".$archive_file_name);
 
-//$connection=new SFTP('200.17.248.35:22',22);
-//$connection->login('cepag', '*Cepag*');
 
 $ano = filter_input(INPUT_POST, 'ano', FILTER_SANITIZE_SPECIAL_CHARS); //recebe valor de ano
 $mes = filter_input(INPUT_POST, 'mes', FILTER_SANITIZE_SPECIAL_CHARS); //recebe valor de mês
