@@ -1,0 +1,161 @@
+help=document.getElementById('ajuda');
+
+function ajuda(){
+tutorial=introJs().setOptions({
+  steps: [{
+    title: 'Welcome',
+    intro: 'Hello World! 👋',
+position: 'right'
+  },
+  {
+    title: 'Busca',
+    intro: 'This step focuses on an image',
+  },
+
+  },
+  {
+    title: 'Campus',
+    intro: 'And this is our final step!',
+  },
+  {
+    title: 'Rotas',
+    intro: 'And this is our final step!',
+  },
+  {
+    title: 'Camadas',
+    intro: 'And this is our final step!',
+  },
+  {
+    title: 'Relatórios',
+    intro: 'And this is our final step!',
+  },
+  {
+    title: 'Downloads',
+    intro: 'And this is our final step!',
+  },
+  {
+    title: 'Extra',
+    intro: 'And this is our final step!',
+  }]
+});
+
+tutorial.setOption('nextLabel', 'Próximo');
+tutorial.setOption('prevLabel', 'Voltar');
+
+tutorial.onchange(function(){
+  if (tutorial._currentStep == "1") {
+     document.getElementById('clickbuscas').click()
+     tutorial._introItems[1].element = document.getElementsByClassName('sidebar-dropdown active')[0]
+     console.log(tutorial._introItems[1].element.clientWidth,tutorial._introItems[1].element.clientHeight)
+            } 
+  if (tutorial._currentStep == "2") {
+     document.getElementById('clickcampus').click()
+     tutorial._introItems[2].element = document.getElementsByClassName('sidebar-dropdown active')[0]
+     console.log(tutorial._introItems[2].element.clientWidth,tutorial._introItems[2].element.clientHeight)
+            } 
+  if (tutorial._currentStep == "3") {
+     document.getElementById('clickrotas').click()
+     tutorial._introItems[3].element = document.getElementsByClassName('sidebar-dropdown active')[0]
+     console.log(tutorial._introItems[3].element.clientWidth,tutorial._introItems[3].element.clientHeight)
+            } 
+  if (tutorial._currentStep == "4") {
+     document.getElementById('clickcamadas').click()
+     tutorial._introItems[4].element = document.getElementsByClassName('sidebar-dropdown active')[0]
+     console.log(tutorial._introItems[4].element.clientWidth,tutorial._introItems[4].element.clientHeight)
+            }
+  if (tutorial._currentStep == "5") {
+     document.getElementById('clickrelatorios').click()
+     tutorial._introItems[5].element = document.getElementsByClassName('sidebar-dropdown active')[0]
+     console.log(tutorial._introItems[5].element.clientWidth,tutorial._introItems[5].element.clientHeight)
+            }    
+  if (tutorial._currentStep == "6") {
+     document.getElementById('clickdownloads').click()
+     tutorial._introItems[6].element = document.getElementsByClassName('sidebar-dropdown active')[0]
+     console.log(tutorial._introItems[6].element.clientWidth,tutorial._introItems[6].element.clientHeight)
+            }
+  if (tutorial._currentStep == "7") {
+     document.getElementById('clickextra').click()
+     tutorial._introItems[7].element = document.getElementsByClassName('sidebar-dropdown active')[0]
+     console.log(tutorial._introItems[7].element.clientWidth,tutorial._introItems[7].element.clientHeight)
+            }                   
+})
+
+tutorial.start();
+}
+
+help.onclick = ajuda;
+
+
+//tutorial.onchange(function(targetElement) {
+  //  if(this._currentStep == 1){
+        
+     //   overlay = document.getElementsByClassName("introjs-fixedTooltip");
+     //   for(i=0; i<overlay.length; i++) {
+     //       overlay[i].style.width = String(document.getElementById('buscas').clientWidth)+'px';
+      //      overlay[i].style.height = String(document.getElementById('buscas').clientHeight)+'px';
+     //       overlay[i].style.position = 'fixed';
+            //Set css properties like this.
+     //   }
+   // }
+    //if(this._currentStep == 2){
+        
+        //overlay = document.getElementsByClassName("introjs-fixedTooltip");
+       // for(i=0; i<overlay.length; i++) {
+      //      overlay[i].style.width = String(document.getElementById('campus').clientWidth)+'px';
+     //       overlay[i].style.height = String(document.getElementById('campus').clientHeight)+'px';
+    //        overlay[i].style.position = 'fixed';
+            //Set css properties like this.
+  //      }
+ //   }
+//    if(this._currentStep == 3){
+        
+      //  overlay = document.getElementsByClassName("introjs-fixedTooltip");
+       // for(i=0; i<overlay.length; i++) {
+          //  overlay[i].style.width = String(document.getElementById('rotas').clientWidth)+'px';
+        //    overlay[i].style.height = String(document.getElementById('rotas').clientHeight)+'px';
+        //    overlay[i].style.position = 'fixed';
+            //Set css properties like this.
+     //   }
+    //}
+   // if(this._currentStep == 4){
+        
+     //   overlay = document.getElementsByClassName("introjs-fixedTooltip");
+     //   for(i=0; i<overlay.length; i++) {
+   //         overlay[i].style.width = String(document.getElementById('camadas').clientWidth)+'px';
+     //       overlay[i].style.height = String(document.getElementById('camadas').clientHeight)+'px';
+     //       overlay[i].style.position = 'fixed';
+            //Set css properties like this.
+     //   }
+    //}
+    //if(this._currentStep == 5){
+        
+       // overlay = document.getElementsByClassName("introjs-fixedTooltip");
+       // for(i=0; i<overlay.length; i++) {
+          //  overlay[i].style.width = String(document.getElementById('relatorios').clientWidth)+'px';
+         //   overlay[i].style.height = String(document.getElementById('relatorios').clientHeight)+'px';
+        //    overlay[i].style.position = 'fixed';
+            //Set css properties like this.
+      //  }
+    //}
+    //if(this._currentStep == 6){
+        
+        //overlay = document.getElementsByClassName("introjs-fixedTooltip");
+       // for(i=0; i<overlay.length; i++) {
+          //  overlay[i].style.width = String(document.getElementById('downloads').clientWidth)+'px';
+         //   overlay[i].style.height = String(document.getElementById('downloads').clientHeight)+'px';
+        //    overlay[i].style.position = 'fixed';
+            //Set css properties like this.
+      //  }
+    //}
+    //if(this._currentStep == 7){
+        
+        //overlay = document.getElementsByClassName("introjs-fixedTooltip");
+        //for(i=0; i<overlay.length; i++) {
+          //  overlay[i].style.width = String(document.getElementById('extra').clientWidth)+'px';
+        //    overlay[i].style.height = String(document.getElementById('extra').clientHeight)+'px';
+      //      overlay[i].style.position = 'fixed';
+            //Set css properties like this.
+    //    }
+  //  }
+//});
+

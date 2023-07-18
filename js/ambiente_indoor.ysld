@@ -1,0 +1,320 @@
+name: ambiente indoor
+title: Simbologia indoor com pictoricos
+
+feature-styles:
+- rules:
+  - name: banheiro
+    filter: ${tipoAmb = 'Banheiro'}
+    symbolizers:
+    - polygon:
+        fill-color: '#63c9f1'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+  - name: circulação
+    filter: ${tipoAmb = 'Circulação'}
+    symbolizers:
+    - polygon:
+        fill-color: '#f1eae0'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+     
+  - name: construção
+    filter: ${tipoAmb = 'Construção'}
+    symbolizers:
+    - polygon:
+        fill-color: '#e1d3e9'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+        
+  - name: ensino
+    filter: ${tipoAmb = 'Ensino'}
+    symbolizers:
+    - polygon:
+        fill-color: '#f7ef9c'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+        
+  - name: institutos de educação
+    filter: ${tipoAmb = 'Institutos de Educação'}
+    symbolizers:
+    - polygon:
+        fill-color: '#f8be8e'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+  - name: objetos
+    filter: ${tipoAmb = 'Objetos'}
+    symbolizers:
+    - polygon:
+        fill-color: '#a2a4a3'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+  - name: sala de professores
+    filter: ${tipoAmb = 'Sala de Professores'}
+    symbolizers:
+    - polygon:
+        fill-color: '#6296d5'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+  - name: transição de nível
+    filter: ${tipoAmb = 'Transição de Nível'}
+    symbolizers:
+    - polygon:
+        fill-color: '#a2a4a3'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+  - name: uso administrativo
+    filter: ${tipoAmb = 'Uso Administrativo'}
+    symbolizers:
+    - polygon:
+        fill-color: '#66b48b'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+        
+  - name: uso comum
+    filter: ${tipoAmb = 'Uso Comum'}
+    symbolizers:
+    - polygon:
+        fill-color: '#ae8ac2'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+  - name: ambiente hospitalar
+    filter: ${tipoAmb = 'Hospitalar'}
+    symbolizers:
+    - polygon:
+        fill-color: '#f3a4c7'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+  - name: vazio
+    filter: ${tipoAmb = 'Vazio'}
+    symbolizers:
+    - polygon:
+        fill-color: '#d6d6d6'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+  - name: uso comercial
+    filter: ${tipoAmb = 'Uso Comercial'}
+    symbolizers:
+    - polygon:
+        fill-color: '#ea8993'
+        stroke-color: '#5c6061'
+        stroke-width: 0.5
+        stroke-linejoin: bevel
+
+
+  - name: label
+    scale: [min,1000]
+    symbolizers:
+    - text:
+        geometry: ${centroid(geom)}
+        label: ${Label}
+        fill-color: '#414141'
+        font-family: Arial
+        font-size: 11
+        font-style: normal
+        font-weight: normal
+        placement: point
+        anchor: [0.5,0.5]
+        displacement: [0,0]
+        x-group: true
+
+
+
+  - name: biblioteca
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Biblioteca'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/biblioteca.png'
+            format: image/png
+            placement: point
+
+  - name: cantina
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Cantina'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/cantina.png'
+            format: image/png
+            placement: point
+
+  - name: banheiro compatilhado
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Compartilhado'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/cantina.png'
+            format: image/png
+            placement: point
+
+  - name: correios
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Correios'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/correios.png'
+            format: image/png
+            placement: point
+
+  - name: diretorio academico
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Diretório Acadêmico'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/diretorio_academico.png'
+            format: image/png
+            placement: point
+
+  - name: elevador
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Elevador'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/elevador.png'
+            format: image/png
+            placement: point
+
+  - name: escada
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Escada'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/escada.png'
+            format: image/png
+            placement: point
+
+  - name: banheiro feminino
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Feminino'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/feminino.png'
+            format: image/png
+            placement: point
+
+  - name: banheiro masculino
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Masculino'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/masculino.png'
+            format: image/png
+            placement: point
+
+  - name: museu
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Museu'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/museu.png'
+            format: image/png
+            placement: point
+
+  - name: papelaria
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Papelaria'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/papelaria.png'
+            format: image/png
+            placement: point
+
+  - name: rampa
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Rampa'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/rampa.png'
+            format: image/png
+            placement: point
+
+  - name: restaurante
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Restaurante'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/restaurante.png'
+            format: image/png
+            placement: point
+
+  - name: saida
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Saída'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/saida.png'
+            format: image/png
+            placement: point
+
+  - name: sala de estudos
+    scale: [min,200]
+    filter: ${subTipoAmb = 'Sala de Estudos'}
+    symbolizers:
+    - point:
+        size: 30
+        symbols:
+        - external:
+            url: 'https://campusmap.ufpr.br/geoserver/www/simbologia_pictorica/v1/sala_de_estudos.png'
+            format: image/png
+            placement: point
